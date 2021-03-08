@@ -13,7 +13,7 @@ class imovel:
     @property
     def codigo(self):
       return self._codigo
-  
+    
     @tipo.setter
     def tipo(self,new_tipo):
       self._tipo = new_tipo      
@@ -180,7 +180,7 @@ class financiamento:
   def cliente(self,new_client):
     self.__cliente = new_client
   def receber_aporte(self,value):
-    self.__valor_financiamento -= _ 
+    #self.__valor_financiamento -= value 
     self.__num_aportes += 1
 
   
@@ -241,7 +241,7 @@ class cliente:
             if 1 > (fin.valor_financiamento/fin.imovel.valor) > 0.7 and (conta.saldo)>= (fin.valor_financiamento):
               opt = input(f'Não foi Possíviel Realizar o financiamento! Receber aporte de {fin.imovel.valor - fin.valor_financiamento}R$ ?(Y/N)')
               if opt.lower() == 'y':
-                fin.receber_aporte(fin.imovel.valor - conta.saldo)
+                fin.receber_aporte(fin.imovel.valor - (fin.imovel.valor - fin.valor_financiamento))
                 conta.debitar(fin.valor_financiamento)
                 self.financiamentos.append(fin)
                 fin.banco.financiamentos.append(fin)
