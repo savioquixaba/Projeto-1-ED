@@ -80,7 +80,7 @@ while power == 1:
               break
           print(f'Seu saldo -> {k.saldo} R$')
           print(f'Saldo de {verify.cliente.nome} -> {verify.saldo} R$')
-          time.sleep(3)
+          input()
           break
   
   elif opcao == '2':
@@ -90,7 +90,7 @@ while power == 1:
         for x in  k.cliente.financiamentos:
        	 	print(f'Tipo:{x.imovel.tipo}\nBanco:{x.banco.nome_do_banco}\nCódigo -> {x.imovel.codigo}\nValor:{x.imovel.valor}R$\nCPF:{x.cliente.cpf}\n\n')
          	
-      time.sleep(6)
+      input()
     
         
   elif opcao == '3':
@@ -100,7 +100,7 @@ while power == 1:
       banko = banks[banco_to_see - 1]
       if password == senha_admin:
         print(f'Total de valor no banco do(a) {banko.nome_do_banco} -> {banko.total_valor_contas()}R$')
-        time.sleep(10)
+        input()
         break
   elif opcao == '4':
   
