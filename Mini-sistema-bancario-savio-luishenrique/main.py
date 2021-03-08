@@ -38,7 +38,6 @@ for x in ademiros:
   #os.system('clear')
 bank_caixa = Banco('Caixa',e[:],[])
 e = []
-print(bank_caixa)
 people = [['Alfredo',303030,5000,10000,137],['Josefa',404040,10000,20000,127]]
 for x in people:
  # name = input('Digite o seu nome -> ')
@@ -49,7 +48,7 @@ for x in people:
   e.append(conta(client,x[4],x[3]))
   #banks[2].contas.append(e)
 bank_itau = Banco('Itau',e[:],[])
-print(bank_itau)
+
 
 e = 0
 h = 0
@@ -66,18 +65,15 @@ while h == 0:
 
   conta1 = int(input('Digite o número da conta -> '))
   os.system('clear')
-  banco_name = int(input('\nDigite o número correspondente do Banco\n\n 1 Para CAIXAl\n 2 Para o ITAU \n\n ->'))
+  banco_name = int(input('\nDigite o número correspondente do Banco\n\n 1 Para CAIXA\n 2 Para o ITAU \n\n ->'))
   bank_atual = banks[banco_name - 1 ] 
-  print(bank_atual)
   for finder in bank_atual.contas:
     if finder.ide == conta1 :
       cliente1 = finder.cliente.cpf
       h = 1
-      print('Funfou')
       time.sleep(2)
       break
     else:
-      print('nao')
       continue
       time.sleep(2)
 power = 1
@@ -94,7 +90,7 @@ while power == 1:
     #conta1 = int(input('Digite o número da conta -> '))
     for k in bank_atual.contas:
         if k.ide == conta1:
-          bank_sec = int(input('\nDigite o número correspondente do Banco\n\n 1 Para CAIXAl\n 2 Para o ITAU \n\n ->'))
+          bank_sec = int(input('\nDigite o número correspondente do Banco\n\n 1 Para CAIXA\n 2 Para o ITAU \n\n ->'))
           conta2 = int(input('Digite o número da conta que você quer transferir -> '))
           bank_send = banks[bank_sec - 1]
           for verify in bank_send.contas:
@@ -125,7 +121,7 @@ while power == 1:
   elif opcao == '3':
     for x in banks:
       password = input('Digite a senha de admin -> ')
-      banco_to_see = int(input('\nDigite o número correspondente do Banco\n\n 1 Para CAIXAl\n 2 Para o ITAU \n\n ->'))
+      banco_to_see = int(input('\nDigite o número correspondente do Banco\n\n 1 Para CAIXA\n 2 Para o ITAU \n\n ->'))
       banko = banks[banco_to_see - 1]
       if password == senha_admin:
         print(f'Total de valor no banco do(a) {banko.nome_do_banco} -> {banko.total_valor_contas()}R$')
