@@ -13,21 +13,7 @@ class imovel:
     @property
     def codigo(self):
       return self._codigo
-    #def vender_imovel(self,cod,value_sell,count_to_sell):
-     # for x in conta1.cliente.financiamentos:
-        #if x.imovel.codigo == cod:
-          #new_imovel = imovel(x.imovel.tipo,x.imovel.valor,cod+1)
-         #fin = financiamento(conta.cliente,new_imovel,banc,valor_financiamento,0)
-         # conta.cliente.new_financiamento(fin,conta)
-          #conta1.creditar(valor_financiamento)
-          #x.valor_financiamento = 0
-       # for x in count_to_sell.cliente.financiamentos:
-        #  if x.imovel.codigo == cod:
-         #   count_to_sell.creditar(value_sell)
-          #  del x
-       #for x in count_to_sell.cliente.financiamentos:
-        #if x.imovel.codigo == cod:
-         #count_to_sell.cliente.financiamentos.remove(x)
+  
     @tipo.setter
     def tipo(self,new_tipo):
       self._tipo = new_tipo      
